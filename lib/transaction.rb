@@ -1,4 +1,6 @@
 class Transaction
+  attr_accessor :credit
+  
   def initialize(amount, date)
     @amount = amount
     @date = date

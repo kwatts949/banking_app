@@ -64,7 +64,7 @@ To print a statement:
 $ account.print_statement
 ```
 Example output:
-![app output](/resources/app_output.png "Terminal snippet showing output")
+<img src="/resources/app_output.png" width="450" height="150" />
 
 # Testing
 

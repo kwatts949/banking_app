@@ -1,9 +1,11 @@
 <h1> Banking App <h1>
 
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Specification'> Specification </a>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Diagram'> Diagram </a>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a>
 
-#Specification
+
+# Specification
 
 * You should be able to interact with your code via a REPL like IRB or Node.  (You don't need to implement a command line interface that takes input from STDIN.)
 * Deposits, withdrawal.
@@ -24,8 +26,10 @@ date || credit || debit || balance
 13/01/2023 || 2000.00 || || 3000.00
 10/01/2023 || 1000.00 || || 1000.00
 ```
+# Diagram
+![diagram of class system](/resources/bank_app_diagram.png "Diagram of classes")
 
-#Installation
+# Installation
 
 Clone this repo.
 
@@ -34,3 +38,4 @@ In terminal (Mac), run:
 $ cd banking_app
 $ bundle install
 ```
+

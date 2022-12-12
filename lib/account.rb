@@ -8,7 +8,6 @@ class Account
   end
 
   def deposit(transaction)
-    p transaction
     transaction.credit = 'true'
     @transactions.push(transaction)
   end

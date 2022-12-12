@@ -1,8 +1,10 @@
 <h1> Banking App <h1>
 
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Specification'> Specification </a>
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Diagram'> Diagram </a>
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Specification'> Specification </a> |
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Diagram'> Diagram </a>|
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a>|
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#How-to-use-the-app'> How to use the app </a>|
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Testing'> Testing </a>
 
 # Specification
 
@@ -36,5 +38,39 @@ In terminal (Mac), run:
 ```
 $ cd banking_app
 $ bundle install
+```
+
+# How to use the app
+
+In terminal (Mac), run:
+```
+$ cd banking_app/lib
+$ irb -r ./account.rb
+```
+To create a new account:
+```
+$ account = Account.new
+```
+To make a deposit:
+```
+$ account.deposit(Transaction.new(500, '12-12-2022'))
+```
+To make a withdrawal:
+```
+$ account.withdraw(Transaction.new(400, '12-12-2022'))
+```
+To print a statement:
+```
+$ account.print_statement
+```
+Example output:
+![app output](/resources/app_output.png "Terminal snippet showing output")
+
+# Testing
+
+To run the tests:
+```
+$ cd banking_app
+$ rspec
 ```
 

@@ -72,7 +72,20 @@ RSpec.describe 'Integration Tests' do
       account.withdraw(transaction_1)
       expect do
         account.print_statement
-      end.to output("\"date || credit || debit || balance\"\n\"10-12-2022 || 500.00 ||  || -500.00\"\n").to_stdout
+      end.to output("\"date || credit || debit || balance\"\n\"10-12-2022 ||  || 500.00 || -500.00\"\n").to_stdout
+    end
+
+    it 'returns a statement containing withdrawals and deposits' do
+      account = Account.new
+      transaction_1 = Transaction.new(500, '10-12-2022')
+      transaction_2 = Transaction.new(300, '12-12-2022')
+      transaction_3 = Transaction.new(100, '12-12-2022')
+      account.deposit(transaction_1)
+      account.withdraw(transaction_2)
+      account.deposit(transaction_3)
+      expect do
+        account.print_statement
+      end.to output("\"date || credit || debit || balance\"\n\"10-12-2022 || 500.00 ||  || 500.00\"\n\"12-12-2022 ||  || 300.00 || 200.00\"\n\"12-12-2022 || 100.00 ||  || 300.00\"\n").to_stdout
     end
   end
 end

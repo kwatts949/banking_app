@@ -19,7 +19,7 @@ class Statement
         p "#{transaction.date} || #{convert(transaction.amount)} ||  || #{convert(@balance)}"
       else
         @balance -= transaction.amount
-        p "#{transaction.date} || #{convert(transaction.amount)} ||  || #{convert(@balance)}"
+        p "#{transaction.date} ||  || #{convert(transaction.amount)} || #{convert(@balance)}"
       end
     end
   end

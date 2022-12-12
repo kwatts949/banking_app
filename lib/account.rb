@@ -14,11 +14,10 @@ class Account
   end
 
   def print_statement
-    @statement.display(@transaction)
+    @statement.display(@transactions)
   end
 
   def transactions
-    p @transactions
     return @transactions
   end
 end

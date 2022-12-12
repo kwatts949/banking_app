@@ -3,7 +3,7 @@
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Specification'> Specification </a>
 
-#Specification
+# Specification
 
 * You should be able to interact with your code via a REPL like IRB or Node.  (You don't need to implement a command line interface that takes input from STDIN.)
 * Deposits, withdrawal.
@@ -25,7 +25,7 @@ date || credit || debit || balance
 10/01/2023 || 1000.00 || || 1000.00
 ```
 
-#Installation
+# Installation
 
 Clone this repo.
 

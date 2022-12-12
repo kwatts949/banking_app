@@ -1,10 +1,11 @@
 <h1> Banking App <h1>
 
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Specification'> Specification </a> |
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Diagram'> Diagram </a>|
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a>|
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#How-to-use-the-app'> How to use the app </a>|
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Testing'> Testing </a>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Diagram'> Diagram </a>|
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Process'> Process </a>|
 
 # Specification
 
@@ -27,8 +28,6 @@ date || credit || debit || balance
 13/01/2023 || 2000.00 || || 3000.00
 10/01/2023 || 1000.00 || || 1000.00
 ```
-# Diagram
-![diagram of class system](/resources/bank_app_diagram.png "Diagram of classes")
 
 # Installation
 
@@ -63,7 +62,7 @@ To print a statement:
 ```
 $ account.print_statement
 ```
-Example output:
+Example output: \
 <img src="/resources/app_output.png" width="450" height="150" />
 
 # Testing
@@ -73,4 +72,12 @@ To run the tests:
 $ cd banking_app
 $ rspec
 ```
+
+# Diagram
+![diagram of class system](/resources/bank_app_diagram.png "Diagram of classes")
+
+# Process
+<a href='https://github.com/kwatts949/banking_app/wiki/Thought-Process'> You can view my thought process & details of how I broke the problem down here </a>
+
+
 

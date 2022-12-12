@@ -39,16 +39,18 @@ RSpec.describe 'Integration Tests' do
   end
 
   context 'printing a statement' do
-    xit 'returns an empty statement' do
+    it 'returns an empty statement' do
       account = Account.new
-      expect(account.print_statement).to eq ("date || credit || debit || balance")
+      expect do
+        account.print_statement
+      end.to output("\"date || credit || debit || balance\"\n\"  ||  ||  || 0.00\"\n").to_stdout
     end
 
-    it 'returns a statement containing a deposit' do
+    xit 'returns a statement containing a deposit' do
       account = Account.new
       transaction_1 = Transaction.new(500, '10-12-2022')
       account.deposit(transaction_1)
-      expect(account.print_statement).to eq "date || credit || debit || balance" "10-12-2022 || 500.00  ||  ||  500.00"
+      expect(account.print_statement)
     end
   end
 end

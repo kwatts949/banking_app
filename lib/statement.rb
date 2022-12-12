@@ -5,19 +5,23 @@ class Statement
 
   def display(transactions)
     print_header
-    print_transactions(transactions)
+    if transactions.empty?
+      p "  ||  ||  || #{@balance}"
+    else
+      print_transactions(transactions)
+    end
   end
 
   def print_transactions(transactions)
     p transactions
     transactions.map do |transaction|
       if transaction.credit == 'true'
-        p "#{transaction.date} || #{transaction.amount} || #{@balance}"
+        p "#{transaction.date} || #{transaction.amount} ||  || #{@balance}"
       end
     end
   end
 
   def print_header
-    return "date || credit || debit || balance"
+    p "date || credit || debit || balance"
   end
 end

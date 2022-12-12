@@ -7,4 +7,8 @@ class Transaction
   def amount
     return @amount
   end
+
+  def date
+    return @date
+  end
 end

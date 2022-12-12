@@ -4,7 +4,10 @@
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Diagram'> Diagram </a>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6e6dc1e4dcdc40b62cca62c8374d970ec4d99501
 # Specification
 
 * You should be able to interact with your code via a REPL like IRB or Node.  (You don't need to implement a command line interface that takes input from STDIN.)

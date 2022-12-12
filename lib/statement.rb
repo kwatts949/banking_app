@@ -18,13 +18,7 @@ class Statement
 
   def print_transactions(transactions)
     transactions.map do |transaction|
-      if transaction.credit == 'true'
-        @balance += transaction.amount
-        @transactions_list << "#{transaction.date} || #{convert(transaction.amount)} || || #{convert(@balance)}"
-      else
-        @balance -= transaction.amount
-        @transactions_list << "#{transaction.date} || || #{convert(transaction.amount)} || #{convert(@balance)}"
-      end
+      format(transaction)
     end
   end
 
@@ -39,7 +33,17 @@ class Statement
   private
 
   def convert(value)
-    return sprintf('%.2f', value)
+    sprintf('%.2f', value)
+  end
+
+  def format(transaction)
+    if transaction.credit == 'true'
+      @balance += transaction.amount
+      @transactions_list << "#{transaction.date} || #{convert(transaction.amount)} || || #{convert(@balance)}"
+    else
+      @balance -= transaction.amount
+      @transactions_list << "#{transaction.date} || || #{convert(transaction.amount)} || #{convert(@balance)}"
+    end
   end
 
 end

@@ -8,6 +8,7 @@ class Account
   end
 
   def deposit(transaction)
+    p transaction
     transaction.credit = 'true'
     @transactions.push(transaction)
   end
@@ -21,10 +22,11 @@ class Account
   end
 
   def transactions
-    return @transactions
+    @transactions
   end
 end
 
+=begin
 account = Account.new
 
 transaction_1 = Transaction.new(1000, "10-01-2023")
@@ -36,3 +38,4 @@ account.deposit(transaction_2)
 account.withdraw(transaction_3)
 
 account.print_statement
+=end

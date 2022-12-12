@@ -1,16 +1,9 @@
+# Creates a new transaction object
 class Transaction
-  attr_accessor :credit
-  
+  attr_accessor :amount, :date, :credit
+
   def initialize(amount, date)
     @amount = amount
     @date = date
-  end
-
-  def amount
-    return @amount
-  end
-
-  def date
-    return @date
   end
 end

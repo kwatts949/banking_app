@@ -1,7 +1,10 @@
 require_relative './transaction'
 require_relative './statement'
 
+# Main class & user interface
 class Account
+  attr_reader :transactions
+
   def initialize
     @transactions = []
     @statement = Statement.new
@@ -18,10 +21,6 @@ class Account
 
   def print_statement
     @statement.display(@transactions)
-  end
-
-  def transactions
-    @transactions
   end
 end
 

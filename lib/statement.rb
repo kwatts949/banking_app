@@ -1,3 +1,4 @@
+# Responsible for formatting of transactions into printable statement
 class Statement
   def initialize
     @balance = 0
@@ -11,7 +12,7 @@ class Statement
     else
       print_transactions(transactions)
       @transactions_list.reverse.map do |transaction|
-      p transaction
+        p transaction
       end
     end
   end
@@ -45,5 +46,4 @@ class Statement
       @transactions_list << "#{transaction.date} || || #{convert(transaction.amount)} || #{convert(@balance)}"
     end
   end
-
 end

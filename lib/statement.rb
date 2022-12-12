@@ -17,6 +17,9 @@ class Statement
       if transaction.credit == 'true'
         @balance += transaction.amount
         p "#{transaction.date} || #{convert(transaction.amount)} ||  || #{convert(@balance)}"
+      else
+        @balance -= transaction.amount
+        p "#{transaction.date} || #{convert(transaction.amount)} ||  || #{convert(@balance)}"
       end
     end
   end

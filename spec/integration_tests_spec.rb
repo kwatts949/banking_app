@@ -54,5 +54,25 @@ RSpec.describe 'Integration Tests' do
         account.print_statement
       end.to output("\"date || credit || debit || balance\"\n\"10-12-2022 || 500.00 ||  || 500.00\"\n").to_stdout
     end
+
+    it 'returns a statement containing two deposits' do
+      account = Account.new
+      transaction_1 = Transaction.new(500, '10-12-2022')
+      transaction_2 = Transaction.new(300, '12-12-2022')
+      account.deposit(transaction_1)
+      account.deposit(transaction_2)
+      expect do
+        account.print_statement
+      end.to output("\"date || credit || debit || balance\"\n\"10-12-2022 || 500.00 ||  || 500.00\"\n\"12-12-2022 || 300.00 ||  || 800.00\"\n").to_stdout
+    end
+
+    it 'returns a statement containing a withdrawal' do
+      account = Account.new
+      transaction_1 = Transaction.new(500, '10-12-2022')
+      account.withdraw(transaction_1)
+      expect do
+        account.print_statement
+      end.to output("\"date || credit || debit || balance\"\n\"10-12-2022 || 500.00 ||  || -500.00\"\n").to_stdout
+    end
   end
 end

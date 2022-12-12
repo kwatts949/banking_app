@@ -13,10 +13,10 @@ class Statement
   end
 
   def print_transactions(transactions)
-    p transactions
     transactions.map do |transaction|
       if transaction.credit == 'true'
-        p "#{transaction.date} || #{transaction.amount} ||  || #{convert(@balance)}"
+        @balance += transaction.amount
+        p "#{transaction.date} || #{convert(transaction.amount)} ||  || #{convert(@balance)}"
       end
     end
   end

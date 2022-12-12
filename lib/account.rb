@@ -1,6 +1,7 @@
 class Account
   def initialize
     @transactions = []
+    @statement = Statement.new
   end
 
   def deposit(transaction)
@@ -10,6 +11,10 @@ class Account
 
   def withdraw(transaction)
     @transactions.push(transaction)
+  end
+
+  def print_statement
+    @statement.display(@transaction)
   end
 
   def transactions

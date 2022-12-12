@@ -1,4 +1,5 @@
 require 'transaction'
+require 'statement'
 
 RSpec.describe 'Integration Tests' do
   context 'making a deposit' do
@@ -35,5 +36,12 @@ RSpec.describe 'Integration Tests' do
     account.withdraw(transaction_1)
     account.withdraw(transaction_2)
     expect(account.transactions).to eq [transaction_1, transaction_2]
+  end
+
+  context 'printing a statement' do
+    it 'returns an empty statement' do
+      account = Account.new
+      expect(account.print_statement).to eq ("date || credit || debit || balance")
+    end
   end
 end

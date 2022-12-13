@@ -1,13 +1,13 @@
 <h1> Banking App <h1> 
+<h4>A tech test to practice code quality. <h4>
 <div>
 <h5>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Specification'> Specification </a> <span> · </span>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a><span> · </span>
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#How-to-use-the-app'> How to use the app </a><span> · </span>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Running-locally'> Running locally</a><span> · </span>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Testing'> Testing </a><span> · </span>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Process'> Process </a><span> · </span>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Diagram'> Diagram </a>
-
 <h5>
 </div>
 
@@ -88,7 +88,10 @@ $ rspec
 <a href='https://github.com/kwatts949/banking_app/wiki/Thought-Process'> You can view my thought process & details of how I broke the problem down here </a>
 
 # Diagram
-![diagram of class system](/resources/bank_app_diagram.png "Diagram of classes")
+<div align='center'>
+<img src="/resources/bank_app_diagram.png" width="650" height="350" />
+</div>
+
 
 
 

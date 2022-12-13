@@ -1,11 +1,15 @@
-<h1> Banking App <h1>
+<h1> Banking App <h1> 
+<div>
+<h5>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Specification'> Specification </a> <span> · </span>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a><span> · </span>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#How-to-use-the-app'> How to use the app </a><span> · </span>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Testing'> Testing </a><span> · </span>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Process'> Process </a><span> · </span>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Diagram'> Diagram </a>
 
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Specification'> Specification </a> |
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a>|
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#How-to-use-the-app'> How to use the app </a>|
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Testing'> Testing </a>
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Diagram'> Diagram </a>|
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Process'> Process </a>|
+<h5>
+</div>
 
 # Specification
 
@@ -39,11 +43,14 @@ $ cd banking_app
 $ bundle install
 ```
 
-# How to use the app
+# Running locally
 
-In terminal (Mac), run:
+Go to project directory:
 ```
 $ cd banking_app/lib
+```
+Require main file:
+```
 $ irb -r ./account.rb
 ```
 To create a new account:
@@ -62,22 +69,25 @@ To print a statement:
 ```
 $ account.print_statement
 ```
-Example output: \
+Example output: <br>
+<div align='center'>
 <img src="/resources/app_output.png" width="450" height="150" />
+</div>
 
-# Testing
+# Testing 
 
 To run the tests:
 ```
-$ cd banking_app
 $ rspec
 ```
+
+# Process
+<a href='https://github.com/kwatts949/banking_app/wiki/Thought-Process'> You can view my thought process & details of how I broke the problem down here </a>
 
 # Diagram
 ![diagram of class system](/resources/bank_app_diagram.png "Diagram of classes")
 
-# Process
-<a href='https://github.com/kwatts949/banking_app/wiki/Thought-Process'> You can view my thought process & details of how I broke the problem down here </a>
+
 
 
 

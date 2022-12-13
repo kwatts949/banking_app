@@ -10,14 +10,14 @@ class Statement
     if transactions.empty?
       print_empty
     else
-      print_transactions(transactions)
+      format_transactions(transactions)
       @transactions_list.reverse.map do |transaction|
         p transaction
       end
     end
   end
 
-  def print_transactions(transactions)
+  def format_transactions(transactions)
     transactions.map do |transaction|
       format(transaction)
     end

@@ -23,17 +23,3 @@ class Account
     @statement.display(@transactions)
   end
 end
-
-=begin
-account = Account.new
-
-transaction_1 = Transaction.new(1000, "10-01-2023")
-transaction_2 = Transaction.new(2000, "13-01-2023")
-transaction_3 = Transaction.new(500, "14-01-2023")
-
-account.deposit(transaction_1)
-account.deposit(transaction_2)
-account.withdraw(transaction_3)
-
-account.print_statement
-=end

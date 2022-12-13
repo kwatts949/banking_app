@@ -1,6 +1,6 @@
 <h1> Banking App <h1> 
-<h4>A tech test to practice code quality. <h4>
 <div>
+A tech test to practice code quality.
 <h5>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Specification'> Specification </a> <span> · </span>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a><span> · </span>
@@ -78,6 +78,7 @@ Example output: <br>
 
 To run the tests:
 ```
+$ cd banking_app
 $ rspec
 ```
 

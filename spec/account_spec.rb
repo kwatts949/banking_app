@@ -9,24 +9,24 @@ RSpec.describe 'Account' do
   context 'making a withdrawal' do
     it 'returns an array of withdrawal objects' do
       account = Account.new
-      fake_withdrawal_1 = double(amount: 500, date: "01-12-2022", credit: nil)
-      fake_withdrawal_2 = double(amount: 700, date: "02-12-2022", credit: nil)
-      account.withdraw(fake_withdrawal_1)
-      account.withdraw(fake_withdrawal_2)
-      expect(account.transactions).to eq [fake_withdrawal_1, fake_withdrawal_2]
+      fake_withdrawal1 = double(amount: 500, date: '01-12-2022', credit: nil)
+      fake_withdrawal2 = double(amount: 700, date: '02-12-2022', credit: nil)
+      account.withdraw(fake_withdrawal1)
+      account.withdraw(fake_withdrawal2)
+      expect(account.transactions).to eq [fake_withdrawal1, fake_withdrawal2]
     end
   end
 
   context 'making a deposit' do
     it 'returns an array of deposit objects' do
       account = Account.new
-      fake_deposit_1 = double(amount: 1000, date: "01-12-2022", credit: nil)
-      fake_deposit_2 = double(amount: 700, date: "02-12-2022", credit: nil)
-      expect(fake_deposit_1).to receive(:credit=).with('true')
-      account.deposit(fake_deposit_1)
-      expect(fake_deposit_2).to receive(:credit=).with('true')
-      account.deposit(fake_deposit_2)
-      expect(account.transactions).to eq [fake_deposit_1, fake_deposit_2]
+      fake_deposit1 = double(amount: 1000, date: '01-12-2022', credit: nil)
+      fake_deposit2 = double(amount: 700, date: '02-12-2022', credit: nil)
+      expect(fake_deposit1).to receive(:credit=).with('true')
+      account.deposit(fake_deposit1)
+      expect(fake_deposit2).to receive(:credit=).with('true')
+      account.deposit(fake_deposit2)
+      expect(account.transactions).to eq [fake_deposit1, fake_deposit2]
     end
   end
 
@@ -34,14 +34,13 @@ RSpec.describe 'Account' do
     it 'returns an array of objects' do
       account = Account.new
 
-      fake_deposit_1 = double(amount: 1000, date: "01-12-2022", credit: 'true')
-      fake_withdrawal_1 = double(amount: 500, date: "01-12-2022", credit: nil)
+      fake_deposit1 = double(amount: 1000, date: '01-12-2022', credit: 'true')
+      fake_withdrawal1 = double(amount: 500, date: '01-12-2022', credit: nil)
 
-      expect(fake_deposit_1).to receive(:credit=).with('true')
-      account.deposit(fake_deposit_1)
-      account.withdraw(fake_withdrawal_1)
-      
-      expect(account.transactions).to eq [fake_deposit_1, fake_withdrawal_1]
+      expect(fake_deposit1).to receive(:credit=).with('true')
+      account.deposit(fake_deposit1)
+      account.withdraw(fake_withdrawal1)
+      expect(account.transactions).to eq [fake_deposit1, fake_withdrawal1]
     end
   end
 
@@ -50,22 +49,22 @@ RSpec.describe 'Account' do
       account = Account.new
       expect do
         account.print_statement
-      end.to output( "\"date || credit || debit || balance\"\n\"  ||  ||  || 0.00\"\n").to_stdout
+      end.to output("\"date || credit || debit || balance\"\n\"  ||  ||  || 0.00\"\n").to_stdout
     end
 
     it 'returns a statement with deposits and withdrawals' do
       account = Account.new
 
-      fake_deposit_1 = double(amount: 1000, date: "01-12-2022", credit: 'true')
-      fake_deposit_2 = double(amount: 2000, date: "02-12-2022", credit: 'true')
-      fake_withdrawal_1 = double(amount: 500, date: "03-12-2022", credit: nil)
+      fake_deposit1 = double(amount: 1000, date: '01-12-2022', credit: 'true')
+      fake_deposit2 = double(amount: 2000, date: '02-12-2022', credit: 'true')
+      fake_withdrawal1 = double(amount: 500, date: '03-12-2022', credit: nil)
 
-      expect(fake_deposit_1).to receive(:credit=).with('true')
-      expect(fake_deposit_2).to receive(:credit=).with('true')
+      expect(fake_deposit1).to receive(:credit=).with('true')
+      expect(fake_deposit2).to receive(:credit=).with('true')
 
-      account.deposit(fake_deposit_1)
-      account.deposit(fake_deposit_2)
-      account.withdraw(fake_withdrawal_1)
+      account.deposit(fake_deposit1)
+      account.deposit(fake_deposit2)
+      account.withdraw(fake_withdrawal1)
 
       expect do
         account.print_statement

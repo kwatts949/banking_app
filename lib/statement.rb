@@ -24,7 +24,7 @@ class Statement
   end
 
   def print_header
-    p "date || credit || debit || balance"
+    p 'date || credit || debit || balance'
   end
 
   def print_empty

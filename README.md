@@ -82,6 +82,9 @@ $ rspec
 ```
 
 # Process
+<h4>User Stories</h4>
+<a href='https://github.com/kwatts949/banking_app/wiki/User-Stories'> You can view the list of user stories here </a>
+<h4>Thought Process</h4>
 <a href='https://github.com/kwatts949/banking_app/wiki/Thought-Process'> You can view my thought process & details of how I broke the problem down here </a>
 
 # Diagram

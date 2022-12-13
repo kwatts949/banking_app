@@ -6,17 +6,16 @@ A tech test to practice code quality.
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a><span> · </span>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Running-locally'> Running locally</a><span> · </span>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Testing'> Testing </a><span> · </span>
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Process'> Process </a><span> · </span>
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Diagram'> Diagram </a>
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Process'> Process </a>  
 <h5>
 </div>
 
 # Specification
 
-* You should be able to interact with your code via a REPL like IRB or Node.  (You don't need to implement a command line interface that takes input from STDIN.)
-* Deposits, withdrawal.
-* Account statement (date, amount, balance) printing.
-* Data can be kept in memory (it doesn't need to be stored to a database or anything).
+- You should be able to interact with your code via a REPL like IRB or Node. (You don't need to implement a command line interface that takes input from STDIN.)
+- Deposits, withdrawal.
+- Account statement (date, amount, balance) printing.
+- Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
 ### Acceptance criteria
 
@@ -38,6 +37,7 @@ date || credit || debit || balance
 Clone this repo.
 
 In terminal (Mac), run:
+
 ```
 $ cd banking_app
 $ bundle install
@@ -46,55 +46,61 @@ $ bundle install
 # Running locally
 
 Go to project directory:
+
 ```
 $ cd banking_app/lib
 ```
+
 Require main file:
+
 ```
 $ irb -r ./account.rb
 ```
+
 To create a new account:
+
 ```
 $ account = Account.new
 ```
+
 To make a deposit:
+
 ```
 $ account.deposit(Transaction.new(500, '12-12-2022'))
 ```
+
 To make a withdrawal:
+
 ```
 $ account.withdraw(Transaction.new(400, '12-12-2022'))
 ```
+
 To print a statement:
+
 ```
 $ account.print_statement
 ```
+
 Example output: <br>
+
 <div align='center'>
 <img src="/resources/app_output.png" width="450" height="150" />
 </div>
 
-# Testing 
+# Testing
 
 To run the tests:
+
 ```
 $ cd banking_app
 $ rspec
 ```
 
 # Process
+
 <h4>User Stories</h4>
 <a href='https://github.com/kwatts949/banking_app/wiki/User-Stories'> You can view the list of user stories here </a>
 <h4>Thought Process</h4>
 <a href='https://github.com/kwatts949/banking_app/wiki/Thought-Process'> You can view my thought process & details of how I broke the problem down here </a>
-
-# Diagram
-<div align='center'>
-<img src="/resources/bank_app_diagram.png" width="650" height="350" />
-</div>
-
-
-
-
-
-
+<h4>Diagram</h4>
+<a href='https://github.com/kwatts949/banking_app/wiki/Diagram'> You can view a diagram solution here </a>

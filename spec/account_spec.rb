@@ -20,8 +20,8 @@ RSpec.describe 'Account' do
   context 'making a deposit' do
     it 'returns an array of deposit objects' do
       account = Account.new
-      fake_deposit1 = double(amount: 1000, date: '01-12-2022', credit: nil)
-      fake_deposit2 = double(amount: 700, date: '02-12-2022', credit: nil)
+      fake_deposit1 = double(amount: 1000, date: '01-12-2022', credit: 'true')
+      fake_deposit2 = double(amount: 700, date: '02-12-2022', credit: 'true')
       expect(fake_deposit1).to receive(:credit=).with('true')
       account.deposit(fake_deposit1)
       expect(fake_deposit2).to receive(:credit=).with('true')
@@ -34,7 +34,7 @@ RSpec.describe 'Account' do
     it 'returns an array of objects' do
       account = Account.new
 
-      fake_deposit1 = double(amount: 1000, date: '01-12-2022', credit: 'true')
+      fake_deposit1 = double(amount: 1000, date: '01-12-2022', credit: nil)
       fake_withdrawal1 = double(amount: 500, date: '01-12-2022', credit: nil)
 
       expect(fake_deposit1).to receive(:credit=).with('true')

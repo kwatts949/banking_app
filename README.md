@@ -84,7 +84,7 @@ $ account.print_statement
 Example output: <br>
 
 <div align='center'>
-<img src="/resources/app_output.png" width="450" height="150" />
+<img src="/resources/app_output.png" width="550" height="250" />
 </div>
 
 # Testing

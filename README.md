@@ -39,8 +39,8 @@ Clone this repo.
 In terminal (Mac), run:
 
 ```
-$ cd banking_app
-$ bundle install
+cd banking_app
+bundle install
 ```
 
 # Running locally
@@ -48,37 +48,37 @@ $ bundle install
 Go to project directory:
 
 ```
-$ cd banking_app/lib
+cd banking_app/lib
 ```
 
 Require main file:
 
 ```
-$ irb -r ./account.rb
+irb -r ./account.rb
 ```
 
 To create a new account:
 
 ```
-$ account = Account.new
+account = Account.new
 ```
 
 To make a deposit:
 
 ```
-$ account.deposit(Transaction.new(500, '12-12-2022'))
+account.deposit(Transaction.new(500, '12-12-2022'))
 ```
 
 To make a withdrawal:
 
 ```
-$ account.withdraw(Transaction.new(400, '12-12-2022'))
+account.withdraw(Transaction.new(400, '12-12-2022'))
 ```
 
 To print a statement:
 
 ```
-$ account.print_statement
+account.print_statement
 ```
 
 Example output: <br>
@@ -92,8 +92,8 @@ Example output: <br>
 To run the tests:
 
 ```
-$ cd banking_app
-$ rspec
+cd banking_app
+rspec
 ```
 
 # Process

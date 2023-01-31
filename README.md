@@ -6,7 +6,8 @@ A tech test to practice code quality.
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Installation'> Installation </a><span> · </span>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Running-locally'> Running locally</a><span> · </span>
 <a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Testing'> Testing </a><span> · </span>
-<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Process'> Process </a>  
+<a href='https://github.com/kwatts949/banking_app/blob/main/README.md#Process'> Process </a>  <span> · </span>
+<a href='https://github.com/kwatts949/banking_app/wiki/Feedback'> Feedback </a>  
 <h5>
 </div>
 
